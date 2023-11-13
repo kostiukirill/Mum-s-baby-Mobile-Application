@@ -3,8 +3,8 @@ import {Text, View} from 'react-native';
 
 const DiaryChildsEat = () => {
   return (
-    <View>
-      <Text>DiaryChildsEat</Text>
+    <View style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <Text>ChildEat</Text>
     </View>
   );
 };

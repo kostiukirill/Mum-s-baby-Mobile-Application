@@ -36,11 +36,21 @@ import { NavBabyIcon } from './src/images/nav-baby-icon';
 import { NavInfoIcon } from './src/images/nav-info';
 import { NavNotificationsIcon } from './src/images/nav-notifications';
 import { NavCalendarIcon } from './src/images/nav-calendar-icon';
+import { createStackNavigator } from '@react-navigation/stack';
+import DiarySleep from './src/components/Home/Diary-sleep/DiarySleep';
+import DiaryGrowth from './src/components/Home/Diary-growth/DiaryGrowth';
+import DiaryTakingMedications from './src/components/Home/Diary-taking-medications/DiaryTakingMedications';
+import DiaryMumsEat from './src/components/Home/Diary-mums-eat/DairyMumsEat';
+import DiaryChildsEat from './src/components/Home/Diary-childs-eat/DiaryChildsEat';
+import Doctors from './src/components/Home/Doctors/Doctors';
+import Vaccinations from './src/components/Home/Vaccinations/Vaccinations';
+import HomeStackScreen from './src/components/StackScreen/HomeStackScreen';
 
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   const Tab = createBottomTabNavigator()
+  const Stack = createStackNavigator();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -71,7 +81,7 @@ function App(): JSX.Element {
                 <NavBabyIcon fill={color || focused} />
               ),
             }}>
-            {() => <Home child={Tayisiya} />}
+            {() => <HomeStackScreen />}
           </Tab.Screen>
           <Tab.Screen
             name="Facts"
@@ -111,6 +121,8 @@ function App(): JSX.Element {
           />
         </Tab.Navigator>
       </NavigationContainer>
+      <View>
+      </View>
     </>
     // </SafeAreaView>
   );

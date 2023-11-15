@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   Image,
   Platform,
@@ -22,7 +21,6 @@ import PillIcon from '../../images/pill';
 
 
 export default function Home({child}: ChildDataType) {
-const [key, setKey] = useState('home')
 const navigation = useNavigation()
     return (
       <View style={styles.home}>
@@ -75,7 +73,7 @@ const navigation = useNavigation()
 
         <View style={styles.buttons_wrapper}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('Sleep')}
+            onPress={() => navigation.navigate('Sleep', {child})}
             style={[
               styles.button,
               child.isGirl ? styles.background_girl : styles.background_boy,

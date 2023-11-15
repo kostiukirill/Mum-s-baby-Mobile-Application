@@ -44,7 +44,7 @@ import DiaryMumsEat from './src/components/Home/Diary-mums-eat/DairyMumsEat';
 import DiaryChildsEat from './src/components/Home/Diary-childs-eat/DiaryChildsEat';
 import Doctors from './src/components/Home/Doctors/Doctors';
 import Vaccinations from './src/components/Home/Vaccinations/Vaccinations';
-import HomeStackScreen from './src/components/StackScreen/HomeStackScreen';
+import HomeStackScreen from './src/components/StackScreens/HomeStackScreen';
 
 
 function App(): JSX.Element {
@@ -75,7 +75,7 @@ function App(): JSX.Element {
             },
           }}>
           <Tab.Screen
-            name="Home"
+            name="HomeScreen"
             options={{
               tabBarIcon: ({color, focused}) => (
                 <NavBabyIcon fill={color || focused} />
